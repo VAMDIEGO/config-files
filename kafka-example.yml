@@ -1,0 +1,21 @@
+server:
+  port: 8099
+  servlet:
+    context-path: /my-context-path
+spring:
+  application:
+    name: MyKafkaExample
+  devtools:
+    restart:
+      enabled: false
+  kafka:
+    bootstrap-servers: your.kafka.broker:9093
+    consumer:
+      group-id: your-group-id
+      auto-offset-reset: earliest
+    ssl:
+      key-store-location: classpath:client.keystore.jks
+      key-store-password: your_keystore_password
+      trust-store-location: classpath:client.truststore.jks
+      trust-store-password: your_truststore_password
+      enabled: true
